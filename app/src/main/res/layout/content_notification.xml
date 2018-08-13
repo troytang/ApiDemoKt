@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tangwy.apidemokt.ui.notification.NotificationActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Common"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/inbox_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/common"
+        android:text="InboxStyle"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/inbox_style"
+        android:text="Update"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/special"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/update"
+        android:text="Special"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/special"
+        android:text="Progress"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/activity_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/progress"
+        android:text="Activity Indicator"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/custom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/activity_indicator"
+        android:text="Custom View"/>
+
+</android.support.constraint.ConstraintLayout>

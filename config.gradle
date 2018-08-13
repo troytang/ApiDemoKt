@@ -1,0 +1,15 @@
+ext {
+    android = [
+            compileSdkVersion: 27,
+            minSdkVersion: 18,
+            targetSdkVersion: 27,
+            applicationId: "com.tangwy.apidemokt",
+
+            versionCode: 1,
+            versionName: "0.0.1"
+    ]
+
+    dependencies = [
+
+    ]
+}
