@@ -3,7 +3,7 @@ package com.tangwy.apidemokt.ui.notification
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
-import com.tangwy.test.R
+import com.tangwy.apidemokt.R
 
 class NotificationSpecialActivity: AppCompatActivity() {
 

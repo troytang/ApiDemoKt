@@ -9,13 +9,13 @@ import android.content.Intent
 import android.support.v4.app.NotificationCompat
 import android.support.v4.app.TaskStackBuilder
 import android.widget.RemoteViews
-import com.tangwy.test.R
+import com.tangwy.apidemokt.R
 import com.tangwy.apidemokt.ui.notification.NotificationActivity
 import com.tangwy.apidemokt.ui.notification.NotificationSpecialActivity
 import com.tangwy.apidemokt.util.Device
 import java.util.*
 
-class NotificationTest {
+class NotificationAPI {
 
     companion object {
 

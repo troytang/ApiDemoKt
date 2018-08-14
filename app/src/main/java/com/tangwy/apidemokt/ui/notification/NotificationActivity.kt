@@ -4,9 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import com.tangwy.test.R
+import com.tangwy.apidemokt.R
 import com.tangwy.apidemokt.framework.notification.NotificationService
-import com.tangwy.apidemokt.framework.notification.NotificationTest
+import com.tangwy.apidemokt.framework.notification.NotificationAPI
 import kotlinx.android.synthetic.main.activity_notification.*
 import kotlinx.android.synthetic.main.content_notification.*
 import java.util.*
@@ -56,36 +56,36 @@ class NotificationActivity: AppCompatActivity() {
     }
 
     private fun notifyCommon() {
-        NotificationTest.notify(this, "Common", "Content")
+        NotificationAPI.notify(this, "Common", "Content")
     }
 
     private fun notifyInboxStyle() {
-        NotificationTest.notifyWithStyle(this, "InboxStyle", "Content")
+        NotificationAPI.notifyWithStyle(this, "InboxStyle", "Content")
     }
 
     private fun notifySpecial() {
-        NotificationTest.notifySpecial(this, "Special", "Content")
+        NotificationAPI.notifySpecial(this, "Special", "Content")
     }
 
     private fun notifyProgress() {
-        NotificationTest.notifyProgress(this, "Progress", "Content")
+        NotificationAPI.notifyProgress(this, "Progress", "Content")
     }
 
     private fun notifyActivityIndicator() {
-        NotificationTest.notifyActivityIndicator(this, "Progress", "Content")
+        NotificationAPI.notifyActivityIndicator(this, "Progress", "Content")
     }
 
     private fun notifyCustom() {
-        NotificationTest.notifyCustom(this, packageName, R.layout.notification_custom)
+        NotificationAPI.notifyCustom(this, packageName, R.layout.notification_custom)
     }
 
     private fun notifyUpdate() {
         val id = Random().nextInt(1000)
         var num = 1
-        NotificationTest.notifyUpdate(this, "Original", num.toString(), id)
+        NotificationAPI.notifyUpdate(this, "Original", num.toString(), id)
         Handler().postDelayed({
             num++
-            NotificationTest.notifyUpdate(this, "Update", num.toString(), id)
+            NotificationAPI.notifyUpdate(this, "Update", num.toString(), id)
         }, 5000)
     }
 }

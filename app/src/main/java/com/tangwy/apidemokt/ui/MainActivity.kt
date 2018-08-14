@@ -6,7 +6,8 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.tangwy.test.R
+import com.tangwy.apidemokt.ui.dialog.DialogActivity
+import com.tangwy.apidemokt.R
 import com.tangwy.apidemokt.ui.notification.NotificationActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,6 +27,11 @@ class MainActivity : AppCompatActivity() {
 
         notification.setOnClickListener {
             val intent = Intent(this, NotificationActivity::class.java)
+            startActivity(intent)
+        }
+
+        dialog.setOnClickListener {
+            val intent = Intent(this, DialogActivity::class.java)
             startActivity(intent)
         }
 

@@ -12,15 +12,15 @@ class NotificationService(name: String): IntentService(name) {
     }
 
     private fun notifyMsg() {
-        NotificationTest.notify(applicationContext, "First Title", "First Content")
+        NotificationAPI.notify(applicationContext, "First Title", "First Content")
 
         Thread.sleep(2000)
-        NotificationTest.notify(applicationContext, "中文名字试下？", "中文内容没有感叹号")
+        NotificationAPI.notify(applicationContext, "中文名字试下？", "中文内容没有感叹号")
 
         Thread.sleep(2000)
-        NotificationTest.notify(applicationContext, "没有感叹号", "中文内容试下\\！")
+        NotificationAPI.notify(applicationContext, "没有感叹号", "中文内容试下\\！")
 
         Thread.sleep(2000)
-        NotificationTest.notify(applicationContext, "Second Title", "Second Content")
+        NotificationAPI.notify(applicationContext, "Second Title", "Second Content")
     }
 }

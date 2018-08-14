@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tangwy.apidemokt.ui.dialog.DialogActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Common"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/common"
+        android:text="Single"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/single_permanent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/single"
+        android:text="Single Permanent"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/multi_permanent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/single_permanent"
+        android:text="Multi Permanent"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/multi_permanent"
+        android:text="Custom"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/callback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/custom"
+        android:text="Callback"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/embedded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/callback"
+        android:text="Embedded"/>
+
+</android.support.constraint.ConstraintLayout>

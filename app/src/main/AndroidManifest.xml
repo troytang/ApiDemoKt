@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tangwy.test">
+    package="com.tangwy.apidemokt">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
@@ -35,6 +37,15 @@
             android:excludeFromRecents="true"/>
         <service android:name="com.tangwy.apidemokt.framework.notification.NotificationService"
             android:process=":notification" />
+
+        <!-- Dialog -->
+        <activity android:name="com.tangwy.apidemokt.ui.dialog.DialogActivity"
+            android:parentActivityName="com.tangwy.apidemokt.ui.MainActivity">
+            <!-- API < 16 需要这里配置 meta-data -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tangwy.apidemokt.ui.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>
