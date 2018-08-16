@@ -6,37 +6,45 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.tangwy.apidemokt.ui.dialog.DialogActivity
 import com.tangwy.apidemokt.R
 import com.tangwy.apidemokt.ui.notification.NotificationActivity
+import com.tangwy.apidemokt.ui.renderscript.RenderScriptActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
+
+    override fun onClick(v: View?) {
+        when (v) {
+            fab -> Snackbar.make(v!!, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+            notification -> {
+                val intent = Intent(this, NotificationActivity::class.java)
+                startActivity(intent)
+            }
+            dialog -> {
+                val intent = Intent(this, DialogActivity::class.java)
+                startActivity(intent)
+            }
+            render_script -> {
+                val intent = Intent(this, RenderScriptActivity::class.java)
+                startActivity(intent)
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
-
-        notification.setOnClickListener {
-            val intent = Intent(this, NotificationActivity::class.java)
-            startActivity(intent)
-        }
-
-        dialog.setOnClickListener {
-            val intent = Intent(this, DialogActivity::class.java)
-            startActivity(intent)
-        }
-
-        // Example of a call to a native method
-//        sample_text.text = stringFromJNI()
+        fab.setOnClickListener(this)
+        notification.setOnClickListener(this)
+        dialog.setOnClickListener(this)
+        render_script.setOnClickListener(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

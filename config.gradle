@@ -4,6 +4,8 @@ ext {
             minSdkVersion: 18,
             targetSdkVersion: 27,
             applicationId: "com.tangwy.apidemokt",
+            renderscriptTargetApi: 24, // 最好保持和 minSdkVersion 一致，这里使用 24 是因为某些 API 需要支持
+            renderscriptSupportModeEnabled: false,
 
             versionCode: 1,
             versionName: "0.0.1"

@@ -21,4 +21,11 @@
         app:layout_constraintTop_toBottomOf="@id/notification"
         android:text="Dialog"/>
 
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/render_script"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/dialog"
+        android:text="Render Script"/>
+
 </android.support.constraint.ConstraintLayout>

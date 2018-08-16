@@ -46,6 +46,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.tangwy.apidemokt.ui.MainActivity"/>
         </activity>
+
+        <!-- RenderScript -->
+        <activity android:name=".ui.renderscript.RenderScriptActivity"
+            android:parentActivityName=".ui.MainActivity">
+            <!-- API < 16 需要这里配置 meta-data -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tangwy.apidemokt.ui.MainActivity"/>
+        </activity>
+
     </application>
 
 </manifest>
